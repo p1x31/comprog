@@ -1,6 +1,3 @@
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -11,20 +8,11 @@ public class Main {
     }
 
     void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
-        int res = n-2;
-        out.println(res*(res+1));
+        int l = in.nextInt();
+        int w = in.nextInt();
+        int h = in.nextInt();
+        out.println((2*(l*h+h*w) + 15) / 16);
     }
-    //n^2-3*(n-1)-1 count unoccupied than substract
-    /*int rec(int n){
-        if (n==1 || n == 2){
-            return 1 ;
-        }
-        else
-        {
-            return n*rec(n-1);
-        }
-    }*/
 
     void run() {
         try (

@@ -1,6 +1,3 @@
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -9,22 +6,19 @@ public class Main {
     public static void main(String[] args) {
         new Main().run();
     }
-
     void solve(Scanner in, PrintWriter out) {
         int n = in.nextInt();
-        int res = n-2;
-        out.println(res*(res+1));
+        int k = in.nextInt();
+        int o = 0;
+        //(n-(k % n) take again % n
+        // o - obijenie
+        if (k % n != 0 ){
+            o = n -(k % n);
+        } else{
+            o = 0;
+        }
+        out.println(k/n + " " + k % n + " " + o);
     }
-    //n^2-3*(n-1)-1 count unoccupied than substract
-    /*int rec(int n){
-        if (n==1 || n == 2){
-            return 1 ;
-        }
-        else
-        {
-            return n*rec(n-1);
-        }
-    }*/
 
     void run() {
         try (

@@ -11,20 +11,17 @@ public class Main {
     }
 
     void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
-        int res = n-2;
-        out.println(res*(res+1));
+        int h1 = in.nextInt();
+        int m1 = in.nextInt();
+        int s1 = in.nextInt();
+        int h2 = in.nextInt();
+        int m2 = in.nextInt();
+        int s2 = in.nextInt();
+        int a = h2 - h1;
+        int b = m2 - m1;
+        int c = s2 - s1;
+        out.println(a*3600+b*60+c);
     }
-    //n^2-3*(n-1)-1 count unoccupied than substract
-    /*int rec(int n){
-        if (n==1 || n == 2){
-            return 1 ;
-        }
-        else
-        {
-            return n*rec(n-1);
-        }
-    }*/
 
     void run() {
         try (
