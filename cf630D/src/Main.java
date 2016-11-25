@@ -1,6 +1,3 @@
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -11,9 +8,8 @@ public class Main {
     }
 
     void solve(Scanner in, PrintWriter out) {
-        int a = in.nextInt();
-        //(a/10)%10
-        out.println((a % 100) / 10);
+        long n = in.nextInt();
+        out.println( 1 + 6*(1+ n)*n / 2);
     }
 
     void run() {

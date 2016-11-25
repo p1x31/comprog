@@ -11,9 +11,9 @@ public class Main {
     }
 
     void solve(Scanner in, PrintWriter out) {
-        int a = in.nextInt();
-        //(a/10)%10
-        out.println((a % 100) / 10);
+        long n = in.nextInt();
+        long k = in.nextLong();
+        out.println( k+1 + (n-2)*(1+ k)*k / 2);
     }
 
     void run() {

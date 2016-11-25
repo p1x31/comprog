@@ -1,6 +1,3 @@
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -12,8 +9,11 @@ public class Main {
 
     void solve(Scanner in, PrintWriter out) {
         int a = in.nextInt();
-        //(a/10)%10
-        out.println((a % 100) / 10);
+        int b = in.nextInt();
+        int c = in.nextInt();
+        int min = Math.min(Math.min(a,b),c);
+        int max = Math.max(Math.max(a,b),c);
+        out.println(max-min);
     }
 
     void run() {

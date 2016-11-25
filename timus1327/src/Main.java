@@ -12,8 +12,8 @@ public class Main {
 
     void solve(Scanner in, PrintWriter out) {
         int a = in.nextInt();
-        //(a/10)%10
-        out.println((a % 100) / 10);
+        int b = in.nextInt();
+        out.println( (b+1)/2 - a/2);
     }
 
     void run() {

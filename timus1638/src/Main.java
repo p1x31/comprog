@@ -11,9 +11,11 @@ public class Main {
     }
 
     void solve(Scanner in, PrintWriter out) {
-        int a = in.nextInt();
-        //(a/10)%10
-        out.println((a % 100) / 10);
+        int t = in.nextInt();
+        int c = in.nextInt();
+        int b = in.nextInt();
+        int e = in.nextInt();
+        out.println(Math.abs(t + ( b - e)* (2 * c + t)));
     }
 
     void run() {

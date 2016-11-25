@@ -11,9 +11,11 @@ public class Main {
     }
 
     void solve(Scanner in, PrintWriter out) {
-        int a = in.nextInt();
-        //(a/10)%10
-        out.println((a % 100) / 10);
+        int h = in.nextInt();
+        int up = in.nextInt();
+        int down = in.nextInt();
+        //h-up + ceil u up -down -1
+        out.println(Math.max(1, 1+ (h - down -1)/(up-down)));
     }
 
     void run() {

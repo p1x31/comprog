@@ -1,7 +1,6 @@
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+
 import java.io.PrintWriter;
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Main {
@@ -11,9 +10,8 @@ public class Main {
     }
 
     void solve(Scanner in, PrintWriter out) {
-        int a = in.nextInt();
-        //(a/10)%10
-        out.println((a % 100) / 10);
+        int n = in.nextInt();
+        out.println((Math.pow(10, (n-1)) + Math.pow(10, n)-1) * 9 * Math.pow(10,n-1)/2);
     }
 
     void run() {
